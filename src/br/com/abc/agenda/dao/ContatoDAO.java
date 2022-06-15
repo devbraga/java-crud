@@ -45,27 +45,6 @@ public class ContatoDAO {
         return null;
     }
 
-//    public List<Contato> listByName(String nome){
-//        String sql = "SELECT * FROM contatos where nome like ?";
-//        List<Contato> contatoList = new ArrayList<>();
-//
-//        try(Connection connection = ConnectionFactory.createConnectionToMySQL();
-//        PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//        ResultSet resultSet = preparedStatement.executeQuery()) {
-//
-//            preparedStatement.setString(1, "%" + nome + "%");
-//            while (resultSet.next()){
-//                contatoList.add(new Contato(resultSet.getInt("id"), resultSet.getString("nome"),
-//                        resultSet.getInt("idade"), resultSet.getDate("dataCadastro")));
-//            }
-//
-//            return contatoList;
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return null;
-//    }
-
     public List<Contato> listByName(String nome){
         String sql = "SELECT * FROM contatos where nome like ?";
         List<Contato> contatoList = new ArrayList<>();
